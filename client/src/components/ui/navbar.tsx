@@ -12,7 +12,7 @@ function Navbar({ className, ...props }: React.ComponentProps<"header">) {
     <header
       data-slot="navbar"
       className={cn(
-        "bg-background flex w-full items-center justify-center border-b py-2",
+        "bg-background sticky top-0 z-50 flex h-[var(--navbar-height)] w-full items-center justify-center border-b py-2",
         className
       )}
       {...props}
@@ -20,11 +20,16 @@ function Navbar({ className, ...props }: React.ComponentProps<"header">) {
   );
 }
 
-function NavbarContent({ className, ...props }: React.ComponentProps<"div">) {
+function NavbarContent({
+  className,
+  maxWidth = "xl",
+  ...props
+}: React.ComponentProps<typeof Section>) {
   return (
     <Section
       data-slot="navbar-content"
-      className={cn("flex w-full max-w-7xl justify-between p-0", className)}
+      maxWidth={maxWidth}
+      className={cn("flex items-center gap-2 py-0", className)}
       {...props}
     />
   );
