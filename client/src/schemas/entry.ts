@@ -13,4 +13,4 @@ export const entrySchema = z.object({
   recurrentId: z.number().optional(),
 });
 
-export type Category = z.infer<typeof entrySchema>;
+export type Entry = z.infer<typeof entrySchema>;

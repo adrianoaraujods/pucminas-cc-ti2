@@ -15,4 +15,4 @@ export const recurringSchema = z.object({
   categoryId: z.number().optional(),
 });
 
-export type User = z.infer<typeof recurringSchema>;
+export type Recurrent = z.infer<typeof recurringSchema>;
