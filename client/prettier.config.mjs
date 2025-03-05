@@ -31,6 +31,8 @@ const config = {
     "^@/components/ui/(.*)$",
     "^@/components/(.*)$",
     "",
+    "^(lucide-react/(.*)$)|^(lucide-react$)",
+    "",
     "^types$",
     "^@/types/(.*)$",
     "<TYPES>",

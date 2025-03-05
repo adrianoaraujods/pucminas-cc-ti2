@@ -1,18 +1,20 @@
 import Link from "next/link";
 
-import { ChartNetworkIcon } from "lucide-react";
-
 import { Button } from "@/components/ui/button";
 import { Navbar, NavbarContent } from "@/components/ui/navbar";
 import { Section } from "@/components/ui/section";
 import { BackgroundPattern } from "@/components/util/background-pattern";
 import { ThemeDropdown } from "@/components/util/theme-dropdown";
 
-import { LoginForm } from "./_form";
+import { ChartNetworkIcon } from "lucide-react";
 
-export default function LoginPage() {
+export default function AuthPageLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <div className="flex min-h-svh flex-col">
+    <>
       <Navbar className="fixed top-0">
         <NavbarContent>
           <Button variant="link" className="text-xl hover:no-underline">
@@ -21,17 +23,20 @@ export default function LoginPage() {
             <Link href="/">FinUp</Link>
           </Button>
 
-          <ThemeDropdown />
+          <div className="ml-auto">
+            <ThemeDropdown />
+          </div>
         </NavbarContent>
       </Navbar>
 
-      <Section className="flex grow items-center justify-center" asChild>
-        <main>
-          <LoginForm />
-        </main>
+      <Section
+        className="flex min-h-svh grow items-center justify-center"
+        asChild
+      >
+        <main>{children}</main>
       </Section>
 
       <BackgroundPattern />
-    </div>
+    </>
   );
 }
