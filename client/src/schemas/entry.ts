@@ -8,7 +8,7 @@ export const entrySchema = z.object({
   updatedAt: z.number(),
 
   // Relations
-  userId: z.number(),
+  walletId: z.number(),
   categoryId: z.number().optional(),
   recurrentId: z.number().optional(),
 });

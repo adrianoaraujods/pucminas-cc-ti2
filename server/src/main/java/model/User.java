@@ -9,7 +9,7 @@ class User {
   private String password; // server-only
   private LocalDate updatedAt;
   private LocalDate createdAt; // server-only
+
+  private int[] wallets;  
   private int[] categories;
-  private int[] entries;
-  private int[] recurring;
 }

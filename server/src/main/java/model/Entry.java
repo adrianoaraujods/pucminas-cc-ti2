@@ -9,7 +9,8 @@ class Entry {
   private LocalDate date;
   private LocalDate updatedAt;
   private LocalDate createdAt; // server-only
-  private int userId;
+
+  private int walletId;
   private int categoryId; // optional
   private int recurrentId; // optional
 }

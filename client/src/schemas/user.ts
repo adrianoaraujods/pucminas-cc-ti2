@@ -7,9 +7,8 @@ export const userSchema = z.object({
   updatedAt: z.number(),
 
   // Relations
+  wallets: z.array(z.number()),
   categories: z.array(z.number()),
-  entries: z.array(z.number()),
-  recurring: z.array(z.number()),
 });
 
 export type User = z.infer<typeof userSchema>;

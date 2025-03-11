@@ -11,7 +11,8 @@ export const recurringSchema = z.object({
   updatedAt: z.number(),
 
   // Relations
-  userId: z.number(),
+  walletId: z.number(),
+  entries: z.array(z.number()),
   categoryId: z.number().optional(),
 });
 

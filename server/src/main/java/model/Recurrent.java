@@ -8,12 +8,14 @@ class Recurrent {
   private int id;
   private String title;
   private float value;
-  private String period;
+  private int period;
   private TimeType type;
   private LocalDate startDate;
   private LocalDate endDate;
   private LocalDate updatedAt;
   private LocalDate createdAt; // server-only
-  private int userId;
+
+  private int walletId;
+  private int[] entries;
   private int categoryId; // optional
 }
